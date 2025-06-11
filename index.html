@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+    <link href="./style.css" rel="stylesheet">   
+</head>
+<body>
+
+  <div class="container">
+    <div id="history" class="history-container">
+      <h1><u>History</u></h1>
+      <ul id="history-list"></ul>
+    </div>
+    <div class="calculator">
+        <input type="text" placeholder="0"
+        id="display" readonly>
+        <div> 
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="operators">x</button>
+            <button class="operators">&divide;</button>
+          </div>
+          <div>
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="operators">+</button>
+            <button class="operators">-</button>
+          </div>
+          <div>
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="operators">%</button>
+            <button class="operators">^</button>
+          </div>
+          <div>
+            <button class="button">.</button>
+            <button class="button">0</button>
+            <button class="delete">
+              <img src="./assets/images/img 1.png" alt="delete"></button>
+            <button id="equalto">=</button>
+            <button class="operators">C</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
