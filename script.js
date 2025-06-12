@@ -87,3 +87,9 @@ function addToHistory(expression, result) {
     item.textContent = `${expression} = ${result}`;
     historyList.prepend(item);
 }
+const toggleBtn = document.getElementById('history-toggle');
+const historyContainer = document.getElementById('history');
+
+toggleBtn.addEventListener('click', () => {
+  historyContainer.classList.toggle('show');
+});

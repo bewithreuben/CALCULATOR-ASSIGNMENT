@@ -28,6 +28,7 @@
 }
 
 #display {
+    margin: auto;
     width: 350px;
     height: 70px;
     margin: 20px;
@@ -114,7 +115,22 @@ h1 {
     color: #000000;
     font-weight: 600;
     font-size: 18px;
+    cursor: pointer;
+    transition: background 0.2s;
 
+}
+
+/* Hide toggle button on large screens */
+.history-toggle {
+    display: none;
+    margin: 10px 0;
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 
@@ -141,16 +157,49 @@ h1 {
 }
 
 button:hover {
-  background-color: #9496ac;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #9496ac;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button:active {
-  transform: scale(0.99);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: scale(0.99);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #equalto:hover {
     background-color: #404259;
+}
+
+.history-toggle:hover {
+    background-color: #f49d1a;
+
+}
+
+
+@media (max-width: 600px) {
+  #display {
+    font-size: 18px;
+    width: 15em;
+  }
+  button{
+    width: 40px;
+  }
+
+  .calculator {
+    padding: 5px;
+  }
+  .history-toggle {
+    display: block;
+    margin-bottom: auto;
+  }
+
+  .history-container {
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .history-container.show {
+    display: block;
+  }
 }
